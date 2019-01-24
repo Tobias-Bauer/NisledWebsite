@@ -1,0 +1,36 @@
+#View {
+  height: 800px;
+  background-image: url('../../../assets/hero.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative
+}
+h1 {
+  font-size: 6rem;
+  text-align: center;
+  color: white;
+  margin-top: 0;
+  padding-top: 300px;
+  line-height: 3rem;
+  animation: HeroH1;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1)
+}
+p {
+  color: #00D1C0;
+}
+svg {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+@keyframes HeroH1{
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

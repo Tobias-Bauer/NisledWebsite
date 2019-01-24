@@ -1,0 +1,53 @@
+.accManager {
+  width: 300px;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  z-index: 10;
+  right: 0px;
+  top: 120px;
+  border-radius: 20px 0 0 20px;
+  display: flex;
+}
+#imageDiv {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 20%
+}
+#icon {
+  height: 30%;
+  margin-left: 30%
+}
+.buttonClass {
+  flex-direction: column;
+  display: grid;
+  width: 80%;
+  grid-template-columns: repeat(1, auto);
+}
+.buttonContainers {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+.button {
+  width: 80%;
+  height: 40%;
+  border-radius: 20px;
+  border: none;
+  background-color: azure;
+  transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  font-size: 20px;
+  font-weight: bold;
+}
+.button:hover {
+  transform: translateY(-5px);
+}
+.logIn {
+  margin: auto auto 6% auto;
+}
+.signUp {
+  margin: 7% auto auto auto
+}

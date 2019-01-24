@@ -1,0 +1,50 @@
+.header {
+  padding-top: 50px;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+/*
+#brand {
+  color: white;
+  font-size: 3rem;
+  font-family: 'Coiny';
+  margin-left: 2%;
+}
+*/
+.HeaderGroup {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  align-items: center;
+  justify-items: center;
+  border-radius: 20px;
+}
+.HeaderGroup button {
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: transparent;
+  border-color: transparent;
+  outline: 0ch;
+  padding: 5px 20px 5px 20px;
+  transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.HeaderGroup button:hover {
+  color: black;
+  background-color: white !important;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px;
+  outline: 0ch;
+  border-color: transparent;
+  cursor: pointer;
+  transform: translateY(-3px);
+}
+.Buy {
+  background-color: rgb(86, 233, 243) !important;
+  color: black !important;
+}

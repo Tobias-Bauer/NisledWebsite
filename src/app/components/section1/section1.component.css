@@ -1,0 +1,12 @@
+div {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 150px
+}
+img {
+  width: 40%;
+  border-radius: 20px;
+  margin-left: 3%
+}
