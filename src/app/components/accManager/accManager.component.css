@@ -51,3 +51,8 @@
 .signUp {
   margin: 7% auto auto auto
 }
+@media (max-width: 767px) {
+  .accManager {
+    display: none
+  }
+}

@@ -24,7 +24,7 @@
   justify-items: center;
   border-radius: 20px;
 }
-.HeaderGroup button {
+button {
   color: white;
   font-weight: 600;
   font-size: 20px;
@@ -35,7 +35,7 @@
   padding: 5px 20px 5px 20px;
   transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-.HeaderGroup button:hover {
+button:hover {
   color: black;
   background-color: white !important;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px;
@@ -47,4 +47,95 @@
 .Buy {
   background-color: rgb(86, 233, 243) !important;
   color: black !important;
+}
+.mobileHeader {
+  display: none
+}
+.mobileMenu {
+  display: none;
+}
+.nisledWeb {
+  height: 50px;
+}
+
+
+@media (max-width: 767px) {
+  .header {
+    display: none;
+  }
+  .mobileHeader{
+    visibility: visible;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0,0.8);
+    position: fixed;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 50px auto 50px;
+    justify-items: center;
+    align-items: center
+  }
+  #shoppingCar {
+    margin-right: 16px;
+    font-size: 40px;
+    color: white
+  }
+  #menu {
+    color: white;
+    transition: 1s;
+    font-size: 40px;
+  }
+  .mobileMenu {
+    width: 100%;
+    position: fixed;
+    top: 50px;
+    background-color: rgba(0, 0, 0,0.8);
+    z-index: 100;
+    transition: 1s;
+    display: none;
+  }
+  .mobileMenu div {
+    padding: 15px;
+    width: 100%;
+    border-top: 1px solid rgba(202, 202, 202, 0.733);
+    outline: none
+  }
+  .mobileMenu a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+  }
+  #svg1 {
+    height: 5px;
+    width: 30px;
+    transition: 1s cubic-bezier(0.1, 0.8, 0.2, 1);
+    margin-bottom: 8px;
+    position: relative;
+  }
+  #svg2 {
+    height: 5px;
+    width: 30px;
+    transition: 1s cubic-bezier(0.1, 0.8, 0.2, 1);
+    position: relative;
+  }
+  #svgContainer {
+    justify-content: center;
+    align-items: center;
+    display: flex
+  }
+  #completeSvg {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column
+  }
+  .nisled {
+    background-image: url('../../../assets/Nisled.png');
+    height: 40px;
+    width: 40px;
+    background-size: cover
+  }
+}
+@media (max-width: 800px) {
+
 }

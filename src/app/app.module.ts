@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MatToolbarModule } from '@angular/material';
+import { MatToolbarModule, MatInputModule, MatIconModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -44,6 +44,8 @@ import { CLogInComponent } from './components/logIn/logIn.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     HttpClientModule,
+    MatInputModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [RootComponent],

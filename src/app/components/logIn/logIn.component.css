@@ -1,0 +1,39 @@
+#View {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+#container {
+  height: 40%;
+  width: 50%;
+  display: flex;
+  flex-direction: row
+}
+#image {
+  width: 40%;
+  height: 100%;
+  background-color: blue;
+  border-radius: 20px 0 0 20px
+}
+#login {
+  width: 60%;
+  height: 100%;
+  border-radius: 0 20px 20px 0;
+  display: flex;
+  flex-direction: column
+}
+#emailContainer {
+  height: 50%;
+  background-color: aqua;
+  border-radius: 0 20px 0 0;
+}
+#passwordContainer {
+  height: 50%;
+  background-color: bisque;
+  border-radius: 0 0 20px 0
+}
+.input {
+  height: 3px;
+}

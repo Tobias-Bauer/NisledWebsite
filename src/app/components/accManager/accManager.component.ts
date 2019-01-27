@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { renderComponent } from '@angular/core/src/render3';
 
 @Component({
   selector: 'app-acc-manager',
@@ -7,18 +8,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./accManager.component.css'],
 })
 export class AccManagerComponent {
-  ishiden = false;
+  isShown;
   accManagerStyle;
   imageStyle;
-  constructor(private router: Router) {}
-
-  navSignUp() {
-    this.router.navigate(['signUp']);
+  constructor(private router: Router) {
+    if (this.router.url.toString() === '/logIn') {
+      this.isShown = false;
+    } else {
+      this.isShown = true;
+    }
+    this.render();
   }
-
-  iconPressed() {
-    if (this.ishiden) {
-      this.ishiden = false;
+  render() {
+    if (this.isShown) {
+      this.isShown = false;
       this.accManagerStyle = {
         'right': '0px',
         'transition': '0.8s cubic-bezier(0.2, 0.8, 0.2, 1)'
@@ -28,7 +31,7 @@ export class AccManagerComponent {
         'transition': '0.8s cubic-bezier(0.2, 0.8, 0.2, 1)'
       };
     } else {
-      this.ishiden = true;
+      this.isShown = true;
       this.accManagerStyle = {
         'right': '-250px',
         'transition': '0.8s cubic-bezier(0.2, 0.8, 0.2, 1)'

@@ -1,9 +1,34 @@
 <div [ngClass]="'header'" [ngStyle]="styleHeaderComponent">
   <div [class]="'HeaderGroup'" [ngStyle]="styleTopBar">
-    <a><img ng-src="./"></a>
-    <a to="/courses"><button>Courses</button></a>
-    <a to="/downloads"><button>Downloads</button></a>
-    <a to="/workshops"><button>Workshops</button></a>
+    <a><img [routerLink]="['/']" [ngClass]="'nisledWeb'" src="../../../assets/Nisled.png"></a>
+    <a [routerLink]="['/']"><button>Community</button></a>
+    <a [routerLink]="['/']"><button>News</button></a>
+    <a [routerLink]="['/']"><button>Other nice stuff</button></a>
     <a to=""><button [ngClass]="'Buy'">Buy</button></a>
+  </div>
+</div>
+<div [ngClass]="'mobileHeader'">
+  <div id="svgContainer" (click)="changeMobileMenuStyle()" (click)="changeIcon()">
+    <div id="completeSvg">
+      <svg id="svg1" [ngStyle]="svg1" width="1962" height="300" viewBox="0 0 1962 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1812 150L150 150" stroke="white" stroke-width="300" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <svg id="svg2" [ngStyle]="svg2" width="1962" height="300" viewBox="0 0 1962 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1812 150L150 150" stroke="white" stroke-width="300" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </div>
+  <a [routerLink]="['/']" [ngClass]="'nisled'"></a>
+  <a [routerLink]="['/logIn']"><mat-icon id="shoppingCar">shopping_cart_outline</mat-icon></a>
+</div>
+<div [ngClass]="'mobileMenu'" [ngStyle]="mobileMenuStyle" >
+  <div [routerLink]="['/']">
+    <a>Community</a>
+  </div>
+  <div [routerLink]="['/']">
+    <a>News</a>
+  </div>
+  <div [routerLink]="['/']">
+    <a>Other nice stuff</a>
   </div>
 </div>
