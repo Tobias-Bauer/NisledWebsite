@@ -17,8 +17,11 @@ import { AccManagerComponent } from './components/accManager/accManager.componen
 import { Error404Component } from './components/404/404.component';
 import { LogInComponent } from './screens/logIn/logIn.component';
 import { SignUpComponent } from './screens/signUp/signUp.component';
+import { CommunityScreenComponent } from './screens/community/community.component';
 import { CSignUpComponent } from './components/signUp/signUp.component';
 import { CLogInComponent } from './components/logIn/logIn.component';
+import { LastPostsComponent } from './components/lastPosts/lastPosts.component';
+import { PostCardComponent } from './components/lastPosts/postCard/postCard.component';
 /*C before Component stands for thr Component version*/
 
 @NgModule({
@@ -35,7 +38,10 @@ import { CLogInComponent } from './components/logIn/logIn.component';
     LogInComponent,
     SignUpComponent,
     CSignUpComponent,
-    CLogInComponent
+    CLogInComponent,
+    CommunityScreenComponent,
+    LastPostsComponent,
+    PostCardComponent
   ],
   imports: [
     BrowserModule,

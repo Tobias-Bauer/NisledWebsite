@@ -63,10 +63,11 @@ export class HeaderComponent implements OnInit {
   changeMobileMenuStyle() {
     if (this.menuIcon === 'menu') {
       this.mobileMenuStyle = {
-        'display': 'grid'};
+        'max-height': '100%'};
     } else {
       this.mobileMenuStyle = {
-        'display': 'none'};
+        'max-height': '0px',
+        'transition': '.5s cubic-bezier(0.1, 0.8, 0.2, 1)'};
     }
   }
 }

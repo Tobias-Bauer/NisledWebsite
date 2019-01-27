@@ -1,0 +1,22 @@
+<app-header></app-header>
+<app-acc-manager></app-acc-manager>
+<app-hero-view></app-hero-view>
+<div id="posts">
+    <img src="../../../assets/community.png">
+    <div id="postDescription">
+      <h1>Posts</h1>
+      <p>Hier siehst du wie andere Nutzer unser Netzwerk bewerten. Teile uns gerne deine Meinung mit. :)</p>
+    </div>
+</div>
+<div id="showRecentPostsContainer" (click)="showRecentPosts()">
+  <div id="showRecentPosts">
+      <p>Show last posts</p>
+  </div>
+</div>
+<div id="recentPosts" [ngStyle]="recentPostsStyle">
+    <h1>Last Posts</h1>
+    <app-last-posts></app-last-posts>
+</div>
+<div id="chat">
+  <h1>Chat</h1>
+</div>

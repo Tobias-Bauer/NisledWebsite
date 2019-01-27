@@ -12,10 +12,10 @@ export class AccManagerComponent {
   accManagerStyle;
   imageStyle;
   constructor(private router: Router) {
-    if (this.router.url.toString() === '/logIn') {
-      this.isShown = false;
-    } else {
+    if (this.router.url.toString() === '/home') {
       this.isShown = true;
+    } else {
+      this.isShown = false;
     }
     this.render();
   }

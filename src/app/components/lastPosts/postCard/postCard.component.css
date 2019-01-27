@@ -1,0 +1,13 @@
+div {
+  display: flex;
+  flex-direction: row;
+  align-items: center
+}
+img {
+  height: 70px;
+  border-radius: 50px;
+  margin-right: 15px
+}
+p {
+  font-size: 25px
+}

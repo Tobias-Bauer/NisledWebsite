@@ -1,7 +1,7 @@
 <div [ngClass]="'header'" [ngStyle]="styleHeaderComponent">
   <div [class]="'HeaderGroup'" [ngStyle]="styleTopBar">
     <a><img [routerLink]="['/']" [ngClass]="'nisledWeb'" src="../../../assets/Nisled.png"></a>
-    <a [routerLink]="['/']"><button>Community</button></a>
+    <a [routerLink]="['/community']"><button>Community</button></a>
     <a [routerLink]="['/']"><button>News</button></a>
     <a [routerLink]="['/']"><button>Other nice stuff</button></a>
     <a to=""><button [ngClass]="'Buy'">Buy</button></a>
@@ -21,8 +21,8 @@
   <a [routerLink]="['/']" [ngClass]="'nisled'"></a>
   <a [routerLink]="['/logIn']"><mat-icon id="shoppingCar">shopping_cart_outline</mat-icon></a>
 </div>
-<div [ngClass]="'mobileMenu'" [ngStyle]="mobileMenuStyle" >
-  <div [routerLink]="['/']">
+<div [ngStyle]="mobileMenuStyle" id="mobileMenu" >
+  <div [routerLink]="['/community']">
     <a>Community</a>
   </div>
   <div [routerLink]="['/']">
