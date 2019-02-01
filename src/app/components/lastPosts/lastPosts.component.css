@@ -1,5 +1,6 @@
-div {
+.grid {
   display: grid;
   grid-template-columns: 50% 50%;
-  width: 100%
+  width: 100%;
+  grid-auto-flow: row dense;
 }

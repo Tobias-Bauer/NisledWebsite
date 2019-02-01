@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MatToolbarModule, MatInputModule, MatIconModule } from '@angular/material';
+import { MatToolbarModule, MatInputModule, MatIconModule, MatDialogModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -51,7 +51,8 @@ import { PostCardComponent } from './components/lastPosts/postCard/postCard.comp
     MatToolbarModule,
     HttpClientModule,
     MatInputModule,
-    MatIconModule
+    MatIconModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [RootComponent],

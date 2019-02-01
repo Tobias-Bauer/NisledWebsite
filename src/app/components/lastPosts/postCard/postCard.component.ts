@@ -6,8 +6,8 @@ import { Content } from '@angular/compiler/src/render3/r3_ast';
   selector: 'app-post-card',
   styleUrls: ['postCard.component.css'],
   template: `
-  <div>
-    <img src="{{imageUrl}}">
+  <div id="card">
+    <div id="cover" [ngStyle]="{'background-image': 'url(' + imageUrl + ')'}"></div>
     <p>{{post}}</p>
   </div>`
 })

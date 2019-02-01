@@ -8,17 +8,15 @@ import { Component } from '@angular/core';
 
 export class CommunityScreenComponent {
   recentPostsStyle;
-  recentPostsStyleChanged = false;
 
   showRecentPosts() {
-    if (!this.recentPostsStyleChanged) {
-      this.recentPostsStyleChanged = true;
-      this.recentPostsStyle = {
-        'max-height': '100%'};
-    } else {
-      this.recentPostsStyleChanged = false;
-      this.recentPostsStyle = {
-        'max-height': '0px'};
-    }
+    this.recentPostsStyle = {
+      'visibility': 'visible'
+    };
+  }
+  closeRecentPosts() {
+    this.recentPostsStyle = {
+      'visibility': 'hidden'
+    };
   }
 }

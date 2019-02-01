@@ -1,10 +1,9 @@
 <div>
-  <app-post-card imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvKZ_u9fYPYfwir-zN16_6_qe0UxGrGBOgZz_qvgQxisc-eRzh" content="nice this works really great"></app-post-card>
-  <app-post-card imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvKZ_u9fYPYfwir-zN16_6_qe0UxGrGBOgZz_qvgQxisc-eRzh" content="nice this works really great"></app-post-card>
-  <app-post-card imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvKZ_u9fYPYfwir-zN16_6_qe0UxGrGBOgZz_qvgQxisc-eRzh" content="nice this works really great"></app-post-card>
-  <app-post-card imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvKZ_u9fYPYfwir-zN16_6_qe0UxGrGBOgZz_qvgQxisc-eRzh" content="nice this works really great"></app-post-card>
-  <app-post-card imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvKZ_u9fYPYfwir-zN16_6_qe0UxGrGBOgZz_qvgQxisc-eRzh" content="nice this works really great"></app-post-card>
-  <app-post-card imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvKZ_u9fYPYfwir-zN16_6_qe0UxGrGBOgZz_qvgQxisc-eRzh" content="nice this works really great"></app-post-card>
-  <app-post-card imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvKZ_u9fYPYfwir-zN16_6_qe0UxGrGBOgZz_qvgQxisc-eRzh" content="nice this works really great"></app-post-card>
-  <app-post-card imageUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvKZ_u9fYPYfwir-zN16_6_qe0UxGrGBOgZz_qvgQxisc-eRzh" content="nice this works really great"></app-post-card>
+  <input (change)="onChange($event)">
+  <button (click)="onAddPost()">Post</button>
+  <div [ngClass]="'grid'">
+    <div *ngFor="let item of doc">
+      <app-post-card imageUrl="{{item.imageUrl}}" content="{{item.content}}"></app-post-card>
+    </div>
+  </div>
 </div>
