@@ -1,9 +1,9 @@
 <div [ngClass]="'header'" [ngStyle]="styleHeaderComponent">
   <div [class]="'HeaderGroup'" [ngStyle]="styleTopBar">
     <a><img [routerLink]="['/']" [ngClass]="'nisledWeb'" src="../../../assets/Nisled.png"></a>
-    <a [routerLink]="['/community']"><button>Community</button></a>
-    <a [routerLink]="['/']"><button>News</button></a>
-    <a [routerLink]="['/']"><button>Other nice stuff</button></a>
+    <a [routerLink]="['/community']" routerLinkActive="active"><button>Community</button></a>
+    <a [routerLink]="['/news']" routerLinkActive="active"><button>News</button></a>
+    <a [routerLink]="['/others']" routerLinkActive="active"><button>Other nice stuff</button></a>
     <a to=""><button [ngClass]="'Buy'">Buy</button></a>
   </div>
 </div>
@@ -22,7 +22,7 @@
   <a [routerLink]="['/logIn']"><mat-icon id="shoppingCar">shopping_cart_outline</mat-icon></a>
 </div>
 <div [ngStyle]="mobileMenuStyle" id="mobileMenu" >
-  <div [routerLink]="['/community']">
+  <div [routerLink]="['/community']" >
     <a>Community</a>
   </div>
   <div [routerLink]="['/']">

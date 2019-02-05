@@ -1,6 +1,11 @@
 <div>
-  <input (change)="onChange($event)">
-  <button (click)="onAddPost()">Post</button>
+  <div class="inputContainer">
+    <mat-form-field appearance="outline" id="form-field">
+      <mat-label>New Post</mat-label>
+      <input [(ngModel)]="inputValue" matInput>
+    </mat-form-field>
+    <button (click)="onAddPost()" id="submitButton">Submit</button>
+  </div>
   <div [ngClass]="'grid'">
     <div *ngFor="let item of doc">
       <app-post-card imageUrl="{{item.imageUrl}}" content="{{item.content}}"></app-post-card>

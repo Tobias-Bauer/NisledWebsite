@@ -4,3 +4,14 @@
   width: 100%;
   grid-auto-flow: row dense;
 }
+#form-field {
+  margin-bottom: -1.25em;
+}
+.inputContainer {
+  align-items: center;
+  display: flex;
+  margin-left: 15px
+}
+#submitButton {
+  margin-left: 5px
+}

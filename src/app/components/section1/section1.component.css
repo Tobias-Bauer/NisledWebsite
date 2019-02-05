@@ -1,12 +1,72 @@
-div {
-  height: 300px;
+#container {
+  display: flex;
+  flex-direction: row;
   width: 100%;
+}
+#imgContainer {
+  width: 30%;
+  height: 315px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -50px
+}
+#imgContainer img {
+  margin-left: 100px
+}
+#textContainer {
+  margin-top: -30px;
+  height: 315px;
+  width: 70%;
   display: flex;
   align-items: center;
-  margin-bottom: 150px
+  justify-content: center;
+  flex-direction: column;
 }
-img {
-  width: 40%;
+#textContainer button {
+  color: white;
+  background-color: rgb(0, 162, 255);
+  border: none;
+  height: 30px;
+  transition: 1s cubic-bezier(0.1, 0.8, 0.2, 1);
+  margin-top: 15px;
   border-radius: 20px;
-  margin-left: 3%
+  border-bottom: 15px
+}
+#textContainer button:hover {
+  transform: translateY(-5px);
+  background-color: rgb(248, 91, 80)
+}
+#textContainer h1 {
+  color: rgb(230, 190, 13);
+  font-size: 50px;
+  margin: 0 0 15px 0;
+  padding: 0;
+  z-index: 0
+}
+#textContainer p {
+  width: 55%;
+  text-align: center;
+  margin: 0;
+  font-size: 25px
+}
+@media (max-width: 715px) {
+  #container {
+    flex-direction: column
+  }
+  #textContainer {
+    width: 100%
+  }
+  #imgContainer {
+    width: 100%;
+    height: 250px;
+  }
+  #imgContainer img {
+    margin-left: 0
+  }
+}
+@media (max-width: 440px) {
+  #textContainer p{
+    font-size: 20px
+  }
 }

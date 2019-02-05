@@ -4,6 +4,9 @@
   position: fixed;
   z-index: 100;
 }
+.active {
+  display: none;
+}
 /*
 #brand {
   color: white;
@@ -19,11 +22,13 @@
   margin: auto;
   text-align: center;
   display: grid;
-  grid-template-columns: repeat(5, auto);
+  grid-template-columns: auto;
+  grid-auto-flow: column;
   align-items: center;
   justify-items: center;
   border-radius: 20px;
 }
+
 button {
   color: white;
   font-weight: 600;

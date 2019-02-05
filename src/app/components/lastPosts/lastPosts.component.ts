@@ -8,16 +8,14 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./lastPosts.component.css']
 })
 export class LastPostsComponent implements OnInit {
-
+  inputValue;
   doc;
-  post: string;
   private serviceSub: Subscription;
   constructor(public postService: PostService) {}
-  onChange(event) {
-    this.post = event.srcElement.value;
-  }
+
   onAddPost() {
-    this.postService.addPost(this.post, 'https://cutlasscabana.com/wp-content/uploads/parser/steve-in-minecraft-1.jpg');
+    this.postService.addPost(this.inputValue, 'https://cutlasscabana.com/wp-content/uploads/parser/steve-in-minecraft-1.jpg');
+    this.inputValue = '';
   }
   ngOnInit() {
     this.postService.getDoc();

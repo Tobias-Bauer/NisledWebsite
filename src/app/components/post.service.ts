@@ -21,6 +21,7 @@ export class PostService {
   addPost(content: string, imageUrl: string) {
     this.http.post<{message: string}>('http://192.168.2.30:3000/api/posts', {content, imageUrl}).subscribe(responseData => {
       console.log(responseData.message);
+      this.getDoc();
     });
   }
 }
