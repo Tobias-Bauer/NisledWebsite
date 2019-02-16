@@ -1,5 +1,5 @@
 <div>
-  <div class="inputContainer">
+  <div class="inputContainer" *ngIf="isExisting">
     <mat-form-field appearance="outline" id="form-field">
       <mat-label>New Post</mat-label>
       <input [(ngModel)]="inputValue" matInput>

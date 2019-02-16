@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  min-height: 340px;
 }
 #imgContainer {
   width: 30%;
@@ -27,11 +28,12 @@
   color: white;
   background-color: rgb(0, 162, 255);
   border: none;
-  height: 30px;
+  min-height: 30px;
   transition: 1s cubic-bezier(0.1, 0.8, 0.2, 1);
   margin-top: 15px;
   border-radius: 20px;
-  border-bottom: 15px
+  border-bottom: 15px;
+  margin-bottom: 15px
 }
 #textContainer button:hover {
   transform: translateY(-5px);

@@ -1,0 +1,23 @@
+div {
+  height: 800px;
+  background-image: url('https://pm1.narvii.com/6456/d9a5deae7a67a6fbcf9d7a1a61268eccd451c64e_hq.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  position: relative
+}
+#waveSvgAnimationTop {
+  position: absolute;
+  top: 0;
+  transform: rotateZ(180deg)
+}
+#waveSvgAnimationBottom {
+  position: absolute;
+  bottom: 0
+}
+h1 {
+  margin-top: 230px;
+  width: 100%;
+  text-align: center;
+  color: white
+}

@@ -1,23 +1,36 @@
-import { Component } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { renderComponent } from '@angular/core/src/render3';
+import {AuthService} from '../auth.service';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-acc-manager',
   templateUrl: './accManager.component.html',
   styleUrls: ['./accManager.component.css'],
 })
-export class AccManagerComponent {
+export class AccManagerComponent implements OnInit, OnDestroy {
   isShown;
   accManagerStyle;
   imageStyle;
-  constructor(private router: Router) {
+  authenticated;
+  private authListenerSub: Subscription;
+  constructor(private router: Router, private authService: AuthService) {}
+
+  ngOnInit() {
+    this.authenticated = this.authService.getAuthStatus();
+    this.authListenerSub = this.authService.getAuthStatusListener().subscribe(isAuthenticated => {
+      this.authenticated = isAuthenticated;
+    });
     if (this.router.url.toString() === '/home') {
       this.isShown = true;
     } else {
       this.isShown = false;
     }
     this.render();
+  }
+  logout() {
+    this.authService.logout();
   }
   render() {
     if (this.isShown) {
@@ -41,5 +54,8 @@ export class AccManagerComponent {
         'transition': '0.8s cubic-bezier(0.2, 0.8, 0.2, 1)'
       };
     }
+  }
+  ngOnDestroy() {
+    this.authListenerSub.unsubscribe();
   }
 }

@@ -1,15 +1,18 @@
 <div id="View">
   <div id="container">
     <div id="image"></div>
-    <form id="login">
+    <form id="login" (submit)="onLogin(loginForm)" #loginForm="ngForm">
       <mat-form-field appearance="outline" id="emailContainer">
-          <mat-label>Email</mat-label>
-        <input matInput [ngClass]="'input'">
+        <mat-label>Email</mat-label>
+        <input matInput #emailInput="ngModel" name="email" ngModel type="email" [ngClass]="'input'" required email>
+        <mat-error *ngIf="emailInput.invalid">Please enter a valid email.</mat-error>
       </mat-form-field>
       <mat-form-field appearance="outline" id="passwordContainer">
-          <mat-label>Password</mat-label>
-          <input matInput [ngClass]="'input'">
+        <mat-label>Password</mat-label>
+        <input matInput #passwordInput="ngModel" name="password" ngModel type="password" [ngClass]="'input'" required>
+        <mat-error *ngIf="passwordInput.invalid">Please enter a valid password.</mat-error>
       </mat-form-field>
+      <button type="submit">Submit</button>
     </form>
   </div>
 </div>

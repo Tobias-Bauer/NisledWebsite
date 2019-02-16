@@ -1,4 +1,4 @@
-<div [ngClass]="'accManager'" [ngStyle]="accManagerStyle">
+<div *ngIf="!authenticated" [ngClass]="'accManager'" [ngStyle]="accManagerStyle">
   <div id="imageDiv">
     <img [ngStyle]="imageStyle" src="../../../assets/arrow.png" id="icon" (click)="render()">
   </div>
@@ -6,4 +6,6 @@
       <button [ngClass]="'button logIn'" [routerLink]="['/logIn']">Log in</button>
       <button [ngClass]="'button signUp'" [routerLink]="['/signUp']">Sign up</button>
   </div>
+</div>
+<div *ngIf="authenticated" (click)="logout()" class="logout">
 </div>
